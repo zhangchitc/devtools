@@ -54,17 +54,13 @@ const config: HardhatUserConfig = {
     networks: {
         'sepolia-testnet': {
             eid: EndpointId.SEPOLIA_V2_TESTNET,
-            url: process.env.RPC_URL_SEPOLIA || 'https://rpc.sepolia.org/',
+            url: 'https://eth-sepolia.g.alchemy.com/v2/-Z5IK5ZknQgG4obvaW3fCSA92G8-5CPE',
             accounts,
+            gasMultiplier: 1.5,
         },
-        'avalanche-testnet': {
-            eid: EndpointId.AVALANCHE_V2_TESTNET,
-            url: process.env.RPC_URL_FUJI || 'https://rpc.ankr.com/avalanche_fuji',
-            accounts,
-        },
-        'amoy-testnet': {
-            eid: EndpointId.AMOY_V2_TESTNET,
-            url: process.env.RPC_URL_AMOY || 'https://polygon-amoy-bor-rpc.publicnode.com',
+        'optimism-testnet': {
+            eid: EndpointId.OPTSEP_V2_TESTNET,
+            url: 'https://opt-sepolia.g.alchemy.com/v2/-Z5IK5ZknQgG4obvaW3fCSA92G8-5CPE',
             accounts,
         },
         hardhat: {
