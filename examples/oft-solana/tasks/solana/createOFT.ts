@@ -202,6 +202,7 @@ task('lz:oft:solana:create', 'Mints new SPL Token and creates new OFT Store acco
                     )
                 }
                 const createTokenTx = await txBuilder.sendAndConfirm(umi)
+                await new Promise((resolve) => setTimeout(resolve, 30000)) // Wait for 1 minute (60000 ms)
                 console.log(`createTokenTx: ${getExplorerTxLink(bs58.encode(createTokenTx.signature), isTestnet)}`)
             }
 
